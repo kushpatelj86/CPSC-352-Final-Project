@@ -35,11 +35,11 @@ This project is a secure file sharing system in which there are clients and a se
 The design of the project was a programming project which is a software or program that was written in the Python programming langauge, it uses multiple python libraries and imports, 
 
 ### Running the program 
-#### In terminal, run command " python3 server.py [port number] [IP address] "
+#### In a dedicated terminal, run command " python3 server.py [port number] [IP address] "
 
 to have this program running, you must first run the server with the command “ python3 server.py 3456 127.0.0.1”, if you try to run a client file first it will throw an exception message saying client doesn’t exist, the components of this program or software are that its a server file, which accepts multiple client connections and receives message from a client, displays the message contents after decrypting it and broadcasts the messages containing the file contents to the other clients listening or waiting in the server, but doesn’t send the message containing the file contents back to the client who sent it recently, instead it keeps it and waits for any more clients in the server, whenever a client disconnects from the server it sends a message saying client disconnected from the server and removes the client who disconnected from its list, if a new client joins the server, it adds the client to its list of clients, if it has problems accepting connections, it displays a message error accepting connection, the server accepts multiple clients at once. The client gets its messages sent to other clients why having the server broadcast the messages to all the clients except them. 
 
-#### In a separate terminal, run command " python3 client.py [port number] [IP address] "
+#### In a separate terminal from server, run command " python3 client.py [port number] [IP address] "
 
 To run a client file, you have to use this command “ python3 client.py 3456 127.0.0.1”. The client can send or receive messages, the client first sends the message, but before doing it the message gets encrypted, then the message containing the file contents gets hashed with a digital signature, the client inputs the host name which is the folder containing all the files and sends all the files and its contents in that folder to the server and the other clients.
 
